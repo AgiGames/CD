@@ -1,19 +1,38 @@
 #include <stddef.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "left-recursion.h"
 #include "left-factoring.h"
 #include "first-follow.h"
 #include "helper.h"
 
-size_t num_non_terms_p = 1;
-char non_terms_p[MAX_CAPACITY] = {'S'};
-size_t num_prod_rules_p[MAX_CAPACITY] = {3};
+size_t num_non_terms_p = 3;
+char non_terms_p[MAX_CAPACITY] = {'S', 'A', 'B'};
+size_t num_prod_rules_p[MAX_CAPACITY] = {2, 2, 2};
 char* prod_rules_p[MAX_CAPACITY][MAX_CAPACITY] = {
-    {"S+/S", "S+*S", EPS_STR}
+    {"aAd", "aB"},
+    {"a", "ab"},
+    {"ccd", "ddc"}
 };
 
 int main() {
+    for (size_t i = 0; i < num_non_terms_p; ++i) {
+        char parent = non_terms_p[i];
+        set_visited(parent);
+        char** prod_rule_set = prod_rules_p[i];
+        size_t set_len = num_prod_rules_p[i];
+
+        for (size_t j = 0; j < set_len; ++j) {
+            char* jth_prod_rule = prod_rule_set[j];
+            size_t prod_rule_len = strlen(jth_prod_rule);
+
+            for (size_t k = 0; k < prod_rule_len; ++k) {
+                set_visited(jth_prod_rule[k]);
+            }
+        }
+    }
+
     left_recur_init(num_non_terms_p, non_terms_p, num_prod_rules_p, prod_rules_p);
     lr_print_prod_rules();
     printf("\n");

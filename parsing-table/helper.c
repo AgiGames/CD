@@ -7,6 +7,10 @@ bool visited[128] = {0};
 char nonterm_ptr = 65;
 char term_ptr = 97;
 
+void set_visited(char chr) {
+    visited[chr] = true;
+}
+
 void update_visited(char* chars, size_t num_chars) {
     for (size_t i = 0; i < num_chars; i++) {
         visited[chars[i]] = true;

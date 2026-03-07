@@ -10,6 +10,7 @@
 
 char get_next_nonterm(); // next capital letter
 char get_next_term(); // next small letter
+void set_visited(char chr);
 void update_visited(char* chars, size_t num_chars);
 bool is_non_term(char token);
 bool is_term(char token);
