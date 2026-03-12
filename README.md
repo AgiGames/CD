@@ -74,5 +74,5 @@ wget https://raw.githubusercontent.com/AgiGames/CD/main/exp8/{first-follow.c,fir
 
 Compile & Run
 ```
-gcc first-follow.c helper.c left-factoring.c left-recursion.c main.c -o && ./a.out
+gcc first-follow.c helper.c left-factoring.c left-recursion.c main.c && ./a.out
 ```
