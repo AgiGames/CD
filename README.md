@@ -56,12 +56,12 @@ flex calc.l && bison -d calc.y && gcc calc.tab.c lex.yy.c -lm && ./a.out
 ### Pull Experiment 7
 
 ```
-wget https://raw.githubusercontent.com/AgiGames/CD/main/exp7/{first-follow.c,helper.h,helper.c}
+wget https://raw.githubusercontent.com/AgiGames/CD/main/exp7/first-follow.c
 ```
 
 Compile & Run
 ```
-gcc first-follow.c helper.c && ./a.out
+gcc first-follow.c && ./a.out
 ```
 
 ---
