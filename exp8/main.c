@@ -35,7 +35,9 @@ int main() {
 
     left_recur_init(num_non_terms_p, non_terms_p, num_prod_rules_p, prod_rules_p);
     lr_print_prod_rules();
-    printf("\n");
+
+    printf("\n\n");
+
     remove_left_recursion();
     lr_print_new_prod_rules();
     size_t lr_num_non_terms = lr_get_new_num_non_terms();
@@ -50,8 +52,6 @@ int main() {
             lr_non_terms,
             lr_num_prod_rules,
             lr_prod_rules);
-    lf_print_prod_rules();
-    printf("\n");
     do_left_factoring();
     lf_print_new_prod_rules();
     size_t lf_num_non_terms = lf_get_new_num_non_terms();
