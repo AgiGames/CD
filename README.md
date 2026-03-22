@@ -76,3 +76,14 @@ Compile & Run
 ```
 gcc first-follow.c helper.c left-factoring.c left-recursion.c main.c && ./a.out
 ```
+
+### Pull Experiment 9
+
+```
+wget https://raw.githubusercontent.com/AgiGames/CD/main/exp9/shift-reduce.cpp
+```
+
+Compile & Run
+```
+g++ shift-reduce.cpp && ./a.out
+```
