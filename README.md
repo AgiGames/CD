@@ -87,3 +87,14 @@ Compile & Run
 ```
 g++ shift-reduce.cpp && ./a.out
 ```
+
+### Pull Experiment 10
+
+```
+wget https://raw.githubusercontent.com/AgiGames/CD/main/exp10/slr-parsing.cpp
+```
+
+Compile & Run
+```
+g++ slr-parsing.cpp && ./a.out
+```
